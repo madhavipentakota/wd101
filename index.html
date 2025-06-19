@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registration Form</title>
+  
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+
+    form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 500px;
+      margin: auto;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    h2{
+      text-align: center;
+    }
+    .form-group {
+      display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    .form-group label {
+  width: 150px; /* Fixed label width */
+  font-weight: 600;
+}
+
+.form-group input {
+  flex: 1; /* Take the remaining space */
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="date"] {
+      width: 50%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+input[type="date"] {
+  color: #dc3545;
+}
+
+    input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .entries {
+  max-width: 700px;
+  margin: 40px auto 0;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+.entries h2 {
+  text-align: center;
+}
+
+
+    button {
+      padding: 10px 20px;
+      background-color: #28c76f;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 40px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f0f0;
+    }
+    .invalid {
+  background-color: rgb(222, 222, 231) !important;
+  border-color: #dc3545 !important;
+}
+  </style> 
+</head>
+<body>
+
+  <form id="registrationForm">
+    <h2>Registration Form</h2>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input id="name" type="text" required placeholder="Enter full name"/>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input id="email" type="email" required placeholder="Enter email"/>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input id="password" type="password" required placeholder="Enter password"/>
+    </div>
+
+    <div class="form-group">
+      <label for="dob">Date of Birth</label>
+      <input id="dob" type="date" required />
+    </div>
+
+    
+      <label>
+        <input id="acceptTerms" type="checkbox" required />
+        Accept Terms & Conditions
+      </label>
+    
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="userTable"class="entries" >
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Dob</th>
+        <th>Accepted terms?</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Entries will be injected here -->
+    </tbody>
+  </table>
+
+  <script src="index.js">
+    
+  </script>
+</body>
+</html>
